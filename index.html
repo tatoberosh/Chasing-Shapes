@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chain of Shapes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1 class="game-title">Chain of Shapes</h1>
+
+        <!-- AGE GATE -->
+        <div id="age-gate" class="screen">
+            <div class="input-group">
+                <label for="age-input">Enter Your Age:</label>
+                <input type="number" id="age-input" min="3" max="10" value="5">
+            </div>
+            <button id="start-game-btn" class="btn">Start Game</button>
+        </div>
+
+        <!-- GAME SCREEN -->
+        <div id="game-screen" class="screen hidden">
+            <div id="status-message" class="status-message">Find the shape you're standing on!</div>
+
+            <div class="world-container">
+                <div id="world"></div>
+            </div>
+
+            <div id="memory-grid"></div>
+        </div>
+
+        <!-- GAME OVER -->
+        <div id="game-over-screen" class="screen hidden">
+            <h2 id="game-over-message" class="game-title">You Lost!</h2>
+            <button id="play-again-btn" class="btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
