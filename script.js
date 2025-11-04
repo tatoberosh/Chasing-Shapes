@@ -167,7 +167,7 @@ function handleStartGame() {
 
         const bubble = document.createElement('div');
         bubble.className = 'player-bubble';
-        bubble.textContent = 'P';
+        bubble.innerHTML = '👣'; // or '👤', '🧑', '●'
         bubble.style.display = 'none';
         tile.appendChild(bubble);
 
