@@ -135,15 +135,18 @@ body {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: #ffe05d;
-    color: #333;
-    font-weight: 700;
+    background: #ef476f;
+    /* Vibrant coral-red — matches your btn gradient */
+    color: white;
+    font-weight: 800;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     font-family: 'Comic Neue', 'Poppins', sans-serif;
     font-size: 14px;
+    border: 2px solid white;
+    /* extra pop against light backgrounds */
 }
 
 /* MEMORY CARDS */
@@ -278,6 +281,47 @@ body {
     outline: none;
     border-color: #ff6b6b;
     box-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+}
+
+.world-container {
+    /* ... your existing styles ... */
+    background:
+        linear-gradient(180deg, #fef3bd 0%, #fff8f0 100%),
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 24px,
+            rgba(255, 209, 102, 0.15) 24px,
+            rgba(255, 209, 102, 0.15) 28px);
+    background-size: 100%, 100% 40px;
+    background-position: 0 0, 0 30px;
+}
+
+.chain-tile .player-bubble {
+    animation: gentle-pulse 2s infinite;
+}
+
+@keyframes gentle-pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+        box-shadow: 0 4px 10px rgba(255, 224, 93, 0.6);
+    }
+}
+
+.card-svg {
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s;
+    /* delay until flip is halfway */
+}
+
+.memory-card.is-flipped .card-svg {
+    opacity: 1;
 }
 
 /* Responsive */

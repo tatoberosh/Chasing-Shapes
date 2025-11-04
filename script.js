@@ -255,11 +255,11 @@ function renderMemoryGrid() {
         card.className = 'memory-card';
         const safeSvg = shape.svg;
         card.innerHTML = `
-            <div class="card-inner">
-                <div class="card-front">?</div>
-                <div class="card-back">${safeSvg}</div>
-            </div>
-        `;
+  <div class="card-inner">
+    <div class="card-front">?</div>
+    <div class="card-back"><div class="card-svg">${safeSvg}</div></div>
+  </div>
+`;
         card.addEventListener('click', () => handleMemoryCardClick(shape, card));
         memoryGrid.appendChild(card);
     });
